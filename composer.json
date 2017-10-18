@@ -10,9 +10,13 @@
         "mockery/mockery": ">=0.7.2"
     },
     "autoload": {
-        "classmap": [ "core" ]
+        "classmap": [ "core", "lib" ]
     },
     "autoload-dev": {
         "classmap": [ "tests/support/models" ]
+    },
+    "scripts": {
+        "post-autoload-dump": "CodeIgniter\\BaseModel\\Composer::postAutoloadDump",
+        "post-package-uninstall": "CodeIgniter\\BaseModel\\Composer::postPackageUninstall"
     }
 }
